@@ -49,7 +49,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun InformacionScreen(modifier: Modifier = Modifier) {
-    val paddingModifier = Modifier.padding(2.dp);
+    val paddingModifier = Modifier.padding(2.dp)
 
     Column (
         modifier
