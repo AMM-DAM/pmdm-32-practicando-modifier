@@ -1,4 +1,4 @@
-package com.pmdm.androidtemplate
+package com.pmdm.`pmdm-32-practicando-modifier`
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "androidtemplate"
+rootProject.name = "pmdm-32-practicando-modifier"
 include(":app")

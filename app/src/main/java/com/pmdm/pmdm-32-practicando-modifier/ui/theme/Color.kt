@@ -1,4 +1,4 @@
-package com.pmdm.androidtemplate.ui.theme
+package com.pmdm.`pmdm-32-practicando-modifier`.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
