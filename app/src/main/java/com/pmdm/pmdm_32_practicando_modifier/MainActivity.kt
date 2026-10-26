@@ -99,6 +99,7 @@ fun EncabezadoCentro(modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier.then(Modifier
+            .fillMaxWidth()
             .border(
                 width = 2.dp,
                 color = MaterialTheme.colorScheme.inversePrimary,
