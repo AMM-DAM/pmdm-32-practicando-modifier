@@ -49,7 +49,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun InformacionScreen(modifier: Modifier = Modifier) {
-    var paddingModifier = Modifier.padding(2.dp);
+    val paddingModifier = Modifier.padding(2.dp);
 
     Column (
         modifier
@@ -120,7 +120,7 @@ fun EncabezadoCentro(modifier: Modifier = Modifier) {
 
 @Composable
 fun ListadoGrados(modifier: Modifier = Modifier) {
-    var marginModifier = Modifier.padding(1.dp)
+    val marginModifier = Modifier.padding(1.dp)
     Column (modifier = modifier) {
         TextoEstiloCiclos("SMR", MaterialTheme.colorScheme.errorContainer, marginModifier)
         TextoEstiloCiclos("ASIR", MaterialTheme.colorScheme.tertiaryContainer, marginModifier)
