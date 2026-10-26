@@ -1,17 +1,24 @@
 package com.pmdm.pmdm_32_practicando_modifier
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.pmdm.pmdm_32_practicando_modifier.ui.theme.AndroidTemplateTheme
 
 class MainActivity : ComponentActivity() {
@@ -41,17 +48,46 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun InformacionScreen(modifier: Modifier = Modifier) {
-    Column {
+    Column (
+        modifier.background(color = MaterialTheme.colorScheme.secondary)
+    ) {
         EncabezadoCentro()
         ListadoGrados()
     }
 }
 
 @Composable
+fun TextoFormateado(
+    text: String,
+    style: TextStyle = MaterialTheme.typography.headlineMedium
+) {
+    Text(
+        text = text,
+        style = style,
+        color = MaterialTheme.colorScheme.inversePrimary
+    )
+}
+
+@Composable
 fun EncabezadoCentro(modifier: Modifier = Modifier) {
-    Column {
-        Text("IES Doctor Balmis")
-        Text("Ciclos Formativos Informática")
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+            .border(
+                width = 2.dp,
+                color = MaterialTheme.colorScheme.inversePrimary,
+                shape = MaterialTheme.shapes.medium
+            )
+            .padding(16.dp)
+    ) {
+        TextoFormateado(
+            text = "IES Doctor Balmis",
+            style = MaterialTheme.typography.headlineLarge
+        )
+        TextoFormateado(
+            text = "Ciclos Formativos Informática",
+            style = MaterialTheme.typography.headlineSmall,
+        )
     }
 }
 
