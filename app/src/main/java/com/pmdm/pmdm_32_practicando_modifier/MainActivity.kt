@@ -50,36 +50,47 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun InformacionScreen(modifier: Modifier = Modifier) {
+    var paddingModifier = Modifier.padding(2.dp);
+
     Column (
-        modifier.background(color = MaterialTheme.colorScheme.secondary)
+        modifier
+            .background(color = MaterialTheme.colorScheme.secondary)
+            .padding(4.dp)
     ) {
-        EncabezadoCentro()
-        ListadoGrados()
+        EncabezadoCentro(paddingModifier)
+        ListadoGrados(paddingModifier)
     }
 }
 
 @Composable
 fun TextoFormateado(
     text: String,
-    style: TextStyle = MaterialTheme.typography.headlineMedium
+    style: TextStyle = MaterialTheme.typography.headlineMedium,
+    modifier: Modifier = Modifier
 ) {
     Text(
         text = text,
         style = style,
-        color = MaterialTheme.colorScheme.inversePrimary
+        color = MaterialTheme.colorScheme.inversePrimary,
+        modifier = modifier
     )
 }
 
 @Composable
-fun TextoEstiloCiclos(text: String, color: Color) {
+fun TextoEstiloCiclos(
+    text: String,
+    color: Color,
+    modifier: Modifier = Modifier
+) {
     Text(
         text = text,
         style = MaterialTheme.typography.bodyMedium,
         color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier
+        modifier = modifier.then(Modifier
             .background(color)
             .padding(6.dp)
             .fillMaxWidth()
+        )
     )
 }
 
@@ -87,13 +98,14 @@ fun TextoEstiloCiclos(text: String, color: Color) {
 fun EncabezadoCentro(modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier
+        modifier = modifier.then(Modifier
             .border(
                 width = 2.dp,
                 color = MaterialTheme.colorScheme.inversePrimary,
                 shape = MaterialTheme.shapes.medium
             )
             .padding(16.dp)
+        )
     ) {
         TextoFormateado(
             text = "IES Doctor Balmis",
@@ -108,11 +120,12 @@ fun EncabezadoCentro(modifier: Modifier = Modifier) {
 
 @Composable
 fun ListadoGrados(modifier: Modifier = Modifier) {
-    Column {
-        TextoEstiloCiclos("SMR", MaterialTheme.colorScheme.errorContainer)
-        TextoEstiloCiclos("ASIR", MaterialTheme.colorScheme.tertiaryContainer)
-        TextoEstiloCiclos("DAW", MaterialTheme.colorScheme.secondaryContainer)
-        TextoEstiloCiclos("DAM", MaterialTheme.colorScheme.primaryContainer)
+    var marginModifier = Modifier.padding(1.dp)
+    Column (modifier = modifier) {
+        TextoEstiloCiclos("SMR", MaterialTheme.colorScheme.errorContainer, marginModifier)
+        TextoEstiloCiclos("ASIR", MaterialTheme.colorScheme.tertiaryContainer, marginModifier)
+        TextoEstiloCiclos("DAW", MaterialTheme.colorScheme.secondaryContainer, marginModifier)
+        TextoEstiloCiclos("DAM", MaterialTheme.colorScheme.primaryContainer, marginModifier)
     }
 }
 
