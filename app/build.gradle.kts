@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.pmdm.pmdm-32-practicando-modifier"
+    namespace = "com.pmdm.pmdm_32_practicando_modifier"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.pmdm.pmmd-32-practicando-modifier"
+        applicationId = "com.pmdm.pmdm_32_practicando_modifier"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

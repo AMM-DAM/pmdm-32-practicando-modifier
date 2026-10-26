@@ -1,4 +1,4 @@
-package com.pmdm.`pmdm-32-practicando-modifier`.ui.theme
+package com.pmdm.pmdm_32_practicando_modifier.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

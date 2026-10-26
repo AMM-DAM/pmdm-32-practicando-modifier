@@ -1,4 +1,4 @@
-package com.pmdm.`pmdm-32-practicando-modifier`
+package com.pmdm.pmdm_32_practicando_modifier
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.pmdm.`pmdm-32-practicando-modifier`.ui.theme.AndroidTemplateTheme
+import com.pmdm.pmdm_32_practicando_modifier.ui.theme.AndroidTemplateTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
