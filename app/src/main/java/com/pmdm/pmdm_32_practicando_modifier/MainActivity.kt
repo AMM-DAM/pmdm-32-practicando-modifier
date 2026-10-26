@@ -64,8 +64,8 @@ fun InformacionScreen(modifier: Modifier = Modifier) {
 @Composable
 fun TextoFormateado(
     text: String,
-    style: TextStyle = MaterialTheme.typography.headlineMedium,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    style: TextStyle = MaterialTheme.typography.headlineMedium
 ) {
     Text(
         text = text,
