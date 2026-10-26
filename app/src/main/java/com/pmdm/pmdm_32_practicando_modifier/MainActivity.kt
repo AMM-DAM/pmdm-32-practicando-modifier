@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -16,6 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -69,6 +71,19 @@ fun TextoFormateado(
 }
 
 @Composable
+fun TextoEstiloCiclos(text: String, color: Color) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.primary,
+        modifier = Modifier
+            .background(color)
+            .padding(6.dp)
+            .fillMaxWidth()
+    )
+}
+
+@Composable
 fun EncabezadoCentro(modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -94,10 +109,10 @@ fun EncabezadoCentro(modifier: Modifier = Modifier) {
 @Composable
 fun ListadoGrados(modifier: Modifier = Modifier) {
     Column {
-        Text("SMR")
-        Text("ASIR")
-        Text("DAW")
-        Text("DAM")
+        TextoEstiloCiclos("SMR", MaterialTheme.colorScheme.errorContainer)
+        TextoEstiloCiclos("ASIR", MaterialTheme.colorScheme.tertiaryContainer)
+        TextoEstiloCiclos("DAW", MaterialTheme.colorScheme.secondaryContainer)
+        TextoEstiloCiclos("DAM", MaterialTheme.colorScheme.primaryContainer)
     }
 }
 
